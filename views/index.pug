@@ -1,0 +1,17 @@
+extends layout
+
+block variables
+  - var title = "Home"
+
+block content
+  h2.text-center Home
+
+  .row
+    .offset-sm-2.col-sm-8
+      .jumbotron.text-center
+        div(class="centering")
+          a(href="/auth/steam", title="Login with Steam!", class="steambutton") 
+            span Login with Steam
+            div(class="icon")
+              i(class="fab fa-steam-square")
+              
