@@ -23,8 +23,8 @@ passport.deserializeUser(function(obj, done) {
 
 passport.use(
   new SteamStrategy({
-    returnURL: 'http://localhost:3000/auth/steam/return',
-    realm: 'http://localhost:3000/',
+    returnURL: process.env.STEAM_API_RETURNURL,
+    realm: process.env.STEAM_API_REALM,
     apiKey: process.env.STEAM_API_KEY
   },
   function(identifier, profile, done) {
